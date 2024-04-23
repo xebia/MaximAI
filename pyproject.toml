@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "maximai"
+version = "0.1.0"
+description = ""
+authors = ["JSchuurmans <jetzeschuurmans@gmail.com>"]
+readme = "README.md"
+packages = [{include = "maximai", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain = "^0.1.16"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

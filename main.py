@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from maximai.langchain import create_context_aware_chatbot, get_context
 from maximai.schemas import Prompt
 
-app = FastAPI(title="Retrieval App")
+app = FastAPI(title="MaximAI Chat App")
 
 chatbot = create_context_aware_chatbot()
 
@@ -15,4 +15,8 @@ async def root(prompt: Prompt):
         {"input": prompt.text, "context": get_context(prompt.user_id)},
         config={"configurable": {"user_id": prompt.user_id}},
     )
-    return {"message": output.content}
+    return {
+        "input_message": prompt.text,
+        "output_message": output.content,
+        "user_id": prompt.user_id,
+    }

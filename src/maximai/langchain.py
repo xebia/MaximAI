@@ -8,6 +8,15 @@ from langchain_google_vertexai import ChatVertexAI
 store = {}
 
 
+def get_context(user_id: str) -> str:
+    info = {
+        "sander": "pizza",
+        "shu": "donuts",
+        "julian": "british scones",
+    }
+    return info[user_id]
+
+
 def get_user_history(user_id: str) -> BaseChatMessageHistory:
     if user_id not in store:
         store[user_id] = ChatMessageHistory()
@@ -15,6 +24,12 @@ def get_user_history(user_id: str) -> BaseChatMessageHistory:
 
 
 def create_chat_chain() -> Runnable:
+    """
+    Creates a chat chain with a prompt template that is can be used to personalize contexts.
+
+    Returns:
+        Runnable: Simple conversational chain.
+    """
     prompt = ChatPromptTemplate.from_messages(
         [
             (

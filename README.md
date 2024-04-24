@@ -35,3 +35,8 @@ You can now make some API calls to the REST API. Source the `tesh.sh` file for s
 ```
 . test.sh
 ```
+If you are authenticated with Google Cloud, you can deploy the container using the script `deploy.sh`
+
+```bash
+source deploy.sh
+```

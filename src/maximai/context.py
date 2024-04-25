@@ -101,7 +101,7 @@ def get_tone_of_voice(user_id: str) -> str:
     if age < 12:
         simple = "Ask simple questions."
     else:
-        simple = "Ask serious questions."
+        simple = "Ask simple but serious questions."
 
     general = "Ask one question at the time. Always ask a follow-up question. Start by building empathy."
 

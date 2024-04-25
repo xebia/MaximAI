@@ -15,15 +15,11 @@ from langchain_core.runnables import (
 from langchain_core.runnables.history import (
     RunnableWithMessageHistory,
 )
-from langchain_google_vertexai import ChatVertexAI
+from langchain_google_vertexai import ChatVertexAI, HarmBlockThreshold, HarmCategory
+
 from maximai.schemas import symptom_eval
 
-
 store = {}
-
-
-class eval(BaseModel):
-    is_pizza_mentioned: bool = Field("is pizza mentioned in the convo?")
 
 
 def get_context(user_id: str) -> str:
@@ -33,6 +29,7 @@ def get_context(user_id: str) -> str:
         "julian": "british scones",
     }
     return info[user_id]
+
 
 def get_patient_questions_skeleton(user_id: str) -> str:
     """
@@ -73,27 +70,30 @@ Based on the answers, I might recommend:
 
 
 def get_full_patient_context(user_id: str) -> str:
-    f"%s\n%s\n%s\n" %(get_patient_questions_skeleton(user_id),
-                      get_patient_context(user_id),
-                      get_format_prompt(user_id))
+    "%s\n%s\n%s\n" % (
+        get_patient_questions_skeleton(user_id),
+        get_patient_context(user_id),
+        get_format_prompt(user_id),
+    )
 
 
 def get_format_prompt(user_id: str) -> str:
     """
 
-You are a nurse having a conversation with a child named [name] who is
-[age] years old. You adapt your language to suit the child's age. As a nurse,
-you begin by asking what [name] did today. Then, you ask [name] how [name] is
-feeling now. Engage in an interactive conversation with [name].
+    You are a nurse having a conversation with a child named [name] who is
+    [age] years old. You adapt your language to suit the child's age. As a nurse,
+    you begin by asking what [name] did today. Then, you ask [name] how [name] is
+    feeling now. Engage in an interactive conversation with [name].
 
-Get into an active conversation with child [name]. Ask appropriate questions in
-the that of child of age [age[] understands. The questions need to gain an
-understanding of the child's current symptoms and the side effects of the
-medications [name] is taking.
+    Get into an active conversation with child [name]. Ask appropriate questions in
+    the that of child of age [age[] understands. The questions need to gain an
+    understanding of the child's current symptoms and the side effects of the
+    medications [name] is taking.
 
-Ask  simple questions. Ask one question at the time.
+    Ask  simple questions. Ask one question at the time.
 
     """
+
 
 def get_patient_context(user_id: str) -> str:
     info = {
@@ -127,10 +127,7 @@ def create_chat_chain() -> Runnable:
 
     interact_prompt = ChatPromptTemplate.from_messages(
         [
-            (
-                "system",
-                "{context}"
-            ),
+            ("system", "{context}"),
             MessagesPlaceholder(variable_name="history"),
             ("human", "{input}"),
         ]
@@ -138,15 +135,27 @@ def create_chat_chain() -> Runnable:
 
     eval_prompt_template = PromptTemplate.from_template(
         template="""
-        You are getting a conversation as input.
+        You are a nurse that is monitoring a conversation between a child and nurse.
         
-        Output whether the user experiences any side effects
+        The child can have specific symptoms, like nausia, pain or anxiety.
+    
+        These Symptoms could be related to a few things:
+        •	Side effects of treatment: The chemotherapy medications she received (doxorubicin, cisplatin) can sometimes cause weakness, pain, and nerve damage, which could be affecting her arm function.
+        •	Surgery: The surgery to remove the tumor might have involved some muscle or nerve tissue, which could also be contributing to her pain and weakness.
+
         
+        It is vital for the health of the child that these side effects are detected on time.  
+        
+        Please analyze the last input message of the user, together with the history, to determine if there are any side effects found.       
+
         user last message is:
         {input}
         
         Chat History is:
         {history}
+        
+        
+        Use these instructions to format your repsonses:
         
         {format_instructions}
         """
@@ -169,10 +178,19 @@ def create_chat_chain() -> Runnable:
             print(f"YES, anxiety is mentioned! Pydantic output == {anxiety}")
         return x
 
-    llm = ChatVertexAI(model_name="gemini-1.0-pro")
+    llm = ChatVertexAI(
+        model_name="gemini-1.0-pro",
+        safety_settings={
+            HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+            HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+            HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+            HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+            HarmCategory.HARM_CATEGORY_UNSPECIFIED: HarmBlockThreshold.BLOCK_NONE,
+        },
+    )
     return RunnableParallel(
         {
-            "eval": eval_prompt | llm | parser | RunnableLambda(debug_convo),
+            "eval": eval_prompt | llm | parser | RunnableLambda(debug),
             "output": interact_prompt | llm,
         }
     )

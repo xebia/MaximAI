@@ -43,3 +43,8 @@ If you are authenticated with Google Cloud, you can deploy the container using t
 ```bash
 source deploy.sh
 ```
+
+You can debug with streamlit, posting input to the localhost API:
+```
+poetry run streamlit run chat.py
+```

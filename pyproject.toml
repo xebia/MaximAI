@@ -19,6 +19,9 @@ black = "^24.4.1"
 flake8 = "^7.0.0"
 isort = "^5.13.2"
 inflect = "^7.2.1"
+google-cloud-speech = "^2.26.0"
+google-cloud-texttospeech = "^2.16.3"
+python-multipart = "^0.0.9"
 
 
 [build-system]

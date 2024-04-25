@@ -116,7 +116,7 @@ def get_tone_of_voice(user_id: str) -> str:
 # - Format (e.g. table with columns, not used here)
 # - Input
 def get_full_patient_context(user_id: str) -> str:
-    return f"%s\n%s\n%s\n%s\n" % (
+    return f"%s\n%s\n%s\n%s\n%s\n" % (
         get_persona_and_goal(),
         get_general_context(),
         get_patient_questions_skeleton(user_id), # instructions, get be user-specific

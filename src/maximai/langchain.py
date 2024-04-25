@@ -70,8 +70,16 @@ Based on the answers, I might recommend:
 •	Occupational therapy:
     """
 
+
+def get_full_patient_context(user_id: str) -> str:
+    f"%s\n%s\n%s\n" %(get_patient_questions_skeleton(user_id),
+                      get_patient_context(user_id),
+                      get_format_prompt(user_id))
+
+
 def get_format_prompt(user_id: str) -> str:
     """
+
 You are a nurse having a conversation with a child named [name] who is
 [age] years old. You adapt your language to suit the child's age. As a nurse,
 you begin by asking what [name] did today. Then, you ask [name] how [name] is
@@ -116,13 +124,11 @@ def create_chat_chain() -> Runnable:
         Runnable: Simple conversational chain.
     """
 
-    basic_context = f"%s\n%s\n%s\n" % (get_format_prompt, get_patient_questions_skeleton, "{context}")
-
     interact_prompt = ChatPromptTemplate.from_messages(
         [
             (
                 "system",
-                base_context
+                "{context}"
             ),
             MessagesPlaceholder(variable_name="history"),
             ("human", "{input}"),

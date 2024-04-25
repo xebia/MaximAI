@@ -30,7 +30,7 @@ def get_patient_questions_skeleton(user_id: str) -> str:
     NOTE: static for now
     """
 
-    """
+    return """
 In the conversation, ask about the following and in the following way.
 •	Loss of function:
 o	Can you raise your arm all the way up?
@@ -62,7 +62,7 @@ Based on the answers, I might recommend:
 
 
 def get_full_patient_context(user_id: str) -> str:
-    "%s\n%s\n%s\n" % (
+    return "%s\n%s\n%s\n" % (
         get_patient_questions_skeleton(user_id),
         get_patient_context(user_id),
         get_format_prompt(user_id),
@@ -70,7 +70,7 @@ def get_full_patient_context(user_id: str) -> str:
 
 
 def get_format_prompt(user_id: str) -> str:
-    """
+    return """
 
     You are a nurse having a conversation with a child named [name] who is
     [age] years old. You adapt your language to suit the child's age. As a nurse,

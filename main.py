@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from maximai.langchain import create_context_aware_chatbot
 from maximai.context import get_full_patient_context
+from maximai.langchain import create_context_aware_chatbot
 from maximai.schemas import Prompt
 
 app = FastAPI(title="MaximAI Chat App")
@@ -14,8 +14,10 @@ chatbot = create_context_aware_chatbot()
 # Define a route to handle API calls
 @app.post("/chat")
 async def root(prompt: Prompt):
+    context = get_full_patient_context(prompt.user_id)
+    print(context)
     output = chatbot.invoke(
-        {"input": prompt.text, "context": get_full_patient_context(prompt.user_id)},
+        {"input": prompt.text, "context": context},
         config={"configurable": {"user_id": prompt.user_id}},
     )
     output = output["output"]

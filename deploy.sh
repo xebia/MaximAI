@@ -15,5 +15,7 @@ gcloud run deploy $SERVICE_NAME \
   --region $REGION \
   --port $CONTAINER_PORT \
   --allow-unauthenticated \
+  --min-instances=1 \
+  --max-instances=1 \ 
   --source .
 

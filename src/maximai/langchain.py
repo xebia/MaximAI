@@ -62,8 +62,12 @@ def create_chat_chain() -> Runnable:
         template="""
         You are getting a conversation as input.
         
-        Output whether the user talked about pizza!
+        Output whether the user talked about pizza
         
+        user last message is:
+        {input}
+        
+        Chat History is:
         {history}
         
         {format_instructions}

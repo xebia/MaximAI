@@ -95,7 +95,7 @@ Based on the answers, I might recommend:
 
 
 def get_full_patient_context(user_id: str) -> str:
-    f"%s\n%s\n%s\n%s\n" %(
+    return f"%s\n%s\n%s\n%s\n" %(
         get_persona_and_goal(),
         get_patient_questions_skeleton(user_id),
         get_format_prompt,

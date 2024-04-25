@@ -1,0 +1,11 @@
+PATIENT DESCRIPTION Thom, 4 years old, diagnosed with DIPG 7 months ago. He is in incurable and in palliative phase of his disease. He has difficulty walking, and talking. He is tired and needs assistance for quiet play. He is drowsy and feels often nauseous and has a headache.
+SAMPLE DIALOG
+Dr. Evans: Hello Thom, how are you today, buddy?
+Thom: Tired look on his face Not good.
+Dr. Evans: Can you tell me where you're not feeling good? Is it your head?
+Thom: Head...and tummy.
+Dr. Evans: Let's make those things feel a little better. I'm going to give you some medicine to help that headache and tummy ache start to go away. Do you want to sit in your mom's lap, or can I help you get comfy under the blanket?
+Thom: Nods slightly towards his mom
+Dr. Evans: Good choice. While the medicine starts working, would you like me to read you one of your favorite stories? Or maybe we can put on some soft music you like?
+Mom: He usually loves listening to the dinosaur song.
+Dr. Evans: Excellent! Let me find that for you. And Thom, once the medicine starts helping you feel better, maybe we can play with blocks for a few minutes. Building a big tower is always fun, don't you think?

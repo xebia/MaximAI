@@ -1,0 +1,16 @@
+PATIENT DESCRIPTION
+David, 3 years old, diagnosed with neuroblastoma stadium IV, or INRG stadium HR, treatment with DCOG NBL, in his 5th N5 cycle. He receives tube feeding and is very nauseous. He vomits 4-5 times a day and the tube feeding is frequently interrupted.
+
+SAMPLE DIALOG
+
+Dr. Williams: Hi David, I understand you've been feeling very sick lately. How many times have you thrown up today?
+David: Two times.
+Dr. Williams: Did you feel your tummy getting upset before you threw up, or did it happen suddenly?
+David: Tummy hurt first.
+Dr. Williams: Okay, that helps me understand. Does throwing up make the tummy ache go away, or does it come back again?
+David: It goes away for a little bit.
+Dr. Williams: We definitely need to try a different medicine to help with that nausea. Does your tummy feel worse after having your tube feeding, or is it kind of bad all the time?
+David: Bad all the time, but worse after.
+Dr. Williams: That makes sense. Sometimes the medicine moving through the tube can upset your tummy. Let's see if we can slow down the feeding a little bit, or maybe give you breaks in between. Does the yucky feeling also make you not want to eat anything?
+David: Uh huh. Don't like food.
+Dr. Williams: That's normal, but we have to make sure you're getting enough energy. Do you think some cold things like a popsicle might feel good on your tummy?

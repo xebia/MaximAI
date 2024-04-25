@@ -1,0 +1,16 @@
+PATIENT DESCRIPTION
+Jan, a 12 years old boy with medulloblastoma, brain surgery and treatment with COG ACNS 0331 and radiation. Experiences headache, fatigue and nausea.
+
+SAMPLE DIALOG
+
+Dr. Evans: Hi Jan, how are you feeling today? I heard your headaches have been giving you trouble.
+Jan: They're still bad, but not as bad as yesterday.
+Dr. Evans: It's good if they're even a little less intense. Are there times of day when the headaches seem strongest, like in the morning or before bed?
+Jan: Definitely worse when I wake up.
+Dr. Evans: That's something we often see. Let's try making some changes to your nighttime and morning routine to see if it helps. Besides the headaches, you mentioned feeling really tired?
+Jan: Yeah, I just want to sleep all the time.
+Dr. Evans: Does the tiredness make it harder to do any of the things you enjoy, even if it's just for a short while?
+Jan: I don't have energy to play games anymore.
+Dr. Evans: Sometimes the medicine can make you feel that way. I want to do some tests and look at your blood work to see if there's anything else going on. Has the nausea been bothering you as well?
+
+pen_spark

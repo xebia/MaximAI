@@ -6,21 +6,23 @@
 ### Local Installation
 
 1. Clone the repository:
-shell
+```shell
 git clone <repository-url>
-2. Install the required dependencies:
+```
 
+2. Install the required dependencies:
 ```bash
 #/bin/bash
-pip install poetry
+pipx install poetry
 poetry lock
-poetry install --with dev
-
+poetry install
 ```
+
 Authenticate to the GCLOUD CLI and set a default project.
 ```bash 
 #/bin/bash
 gcloud auth login
+gcloud auth application-default login
 gcloud config set project $MY_PROJECT_ID
 ```
 

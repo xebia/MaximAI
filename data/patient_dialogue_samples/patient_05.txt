@@ -1,0 +1,14 @@
+PATIENT DESCRIPTION
+Bjorn, 16 years old, diagnosed with craniopharyngioma, a very wise and talkative person. Brain surgery and partly resection of the tumor. It is one week after surgery, he experiences drowsiness and nausea when he leaves his bed. Despite his restrictions, needs help to go to the bathroom and experiences difficulty walking, he is happy and grateful that he survived surgery.
+
+SAMPLE DIALOG
+
+Dr. Chen: Hi Bjorn, I'm glad to see you're feeling well enough to sit up today. How's your head feeling?
+Bjorn: A bit achy, but not too bad. Mostly I just feel woozy.
+Dr. Chen: It's normal to feel dizzy and off-balance after brain surgery. Has the wooziness gotten any better or worse than it was yesterday?
+Bjorn: I think a little better, but it gets bad when I try to stand up.
+Dr. Chen: That makes sense. I want you to start getting out of bed for short periods, but with a nurse assisting you. Let's see how you feel sitting on the edge of the bed for a few minutes. Have you been feeling nauseous too?
+Bjorn: On and off. Mostly when I try to move around.
+Dr. Chen: Are you able to keep any liquids down, or do you feel like you might throw up even when drinking?
+Bjorn: I can keep water down, but juice makes me queasy.
+Dr. Chen: We're going to adjust your nausea medication to see if that helps control it better. And for now, let's stick with water to keep you hydrated. It sounds like you're making good progress, Bjorn!

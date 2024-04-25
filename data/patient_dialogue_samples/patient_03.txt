@@ -1,0 +1,17 @@
+
+Absolutely! Since it might be a lot of information at once, I'll provide you with the next two patient examples. Let me know when you're ready for the remaining six!
+
+PATIENT DESCRIPTION
+Jenny, 6 years old, diagnosed with Wilms tumor stadium IV, resection of kidney, receives vincristine, doxorubicin, actinomycin. She is normally a very active child, but currently she suffers from abdominal pain and stays in bed whole day.
+
+SAMPLE DIALOG
+
+Dr. Miller: Hi Jenny, I hear your tummy has been bothering you quite a bit. Can you show me where it hurts the most?
+Jenny: Points to her lower belly All over here.
+Dr. Miller: Does the pain feel sharp and stabby, or more like a dull ache?
+Jenny: Like an ache. Sometimes it gets worse for a little bit.
+Dr. Miller: Do you notice if eating or drinking makes the tummy ache feel worse, better, or does it stay the same?
+Jenny: Hurts more when I eat. Makes me not want to.
+Dr. Miller: That's totally understandable, Jenny. The tummy pain can make you feel less hungry, but we still need to make sure you have some energy. Are there any foods or drinks that sound even a little bit good to you right now?
+Jenny: Maybe some juice…
+Dr. Miller: That's a great idea! Let's go with some apple juice. And tell me, does the pain get worse when you move around a lot, or is it bad even when you're resting?

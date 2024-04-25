@@ -69,7 +69,7 @@ def create_chat_chain() -> Runnable:
     
     interact_prompt = ChatPromptTemplate.from_messages(
         [
-            ("system", "{context}. If one if the sympoms in the Pydantic schema is true {eval} react to the symptom that are true"),
+            ("system", "{context}. If one if the sympoms in the Pydantic schema {eval} is true, react to the symptom that are true"),
             MessagesPlaceholder(variable_name="history"),
             ("human", "{input}"),
         ]

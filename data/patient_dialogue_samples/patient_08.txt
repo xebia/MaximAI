@@ -1,0 +1,20 @@
+PATIENT DESCRIPTION Ella, 3 years, diagnosed with AML, treatment protocol NOPHO-DBH AML 2012. She has finished FLA cycle (fludarabine, cytarabine and MTX intrathecal). She does not want to eat or talk, is anxious and sits on her mother’s lap when the nurse enters the room.
+SAMPLE DIALOG
+Dr. Patel: Hi Ella, it's good to see you. Your mom says you haven't felt like eating. Does your tummy feel yucky?
+Ella: Nods slightly, clinging to her mom
+Dr. Patel: Sometimes the medicine can make our tummies feel upset. Do you want to show me where it feels yucky?
+Ella: Points to her lower belly
+Dr. Patel: Is it more of an achy feeling, or does it feel like you might throw up?
+Ella: Looks at her mom
+Dr. Patel: I'm going to listen to your tummy for just a second, ok? Gently examines Ella's abdomen It seems like you haven't wanted to talk much either. Can you tell me a little bit about what you're worried about?
+Ella: Whispers something to her mom
+Mom: She says she's scared.
+Dr. Patel: That makes a lot of sense, Ella. Do you want to hear a funny story to help take your mind off things, or maybe draw a picture together?
+Dr. Patel: That makes a lot of sense, Ella. Do you want to hear a funny story to help take your mind off things, or maybe draw a picture together?
+Ella: Whispers yes to her mom
+Dr. Patel: Do you want to draw with crayons, markers, or maybe some sparkly paints?
+Ella: Nods towards the crayons
+Dr. Patel: Great choice! While we draw, I'm going to tell you a very silly story about a frog who lost his hat. Would you like to help me illustrate the story?
+Ella: Nods slightly
+Dr. Patel: Excellent! Let's start by drawing a big pond for our frog...
+

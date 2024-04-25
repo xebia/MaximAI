@@ -1,0 +1,29 @@
+PATIENT DESCRIPTION Daisy, 17 years, diagnosed with non-Hodgkin lymphoma (DLBCL).
+Treatment with cyclophosphamide, MTX and ARA-C. She used to have long blond hair and she
+feels miserable about being bald and about her changed appearance. She often feels sick and
+tired.
+SAMPLE DIALOG
+Dr. Reed: Hi Daisy, how are you feeling today?
+Daisy: Blah. Same as always.
+Dr. Reed: I know it's been a rough few weeks. Are you feeling nauseous right now, or is
+it more of a general 'blah' feeling?
+Daisy: A little nauseous, but mostly just tired of it all.
+Dr. Reed: I completely understand. You mentioned last time that feeling different due to
+hair loss was really bothering you. Has that gotten any easier, or is it still on your mind a
+lot?
+Daisy: It's still terrible. I hate looking in the mirror.
+Dr. Reed: That's a completely normal reaction. It's a big change, both physically and
+emotionally. Do you want to talk about ways to make it feel a little more manageable?
+Would you be interested in trying different hats, scarves, or even a wig?
+Daisy: I don't know... Maybe.
+Dr. Reed: There's no pressure. But if you decide you do want to explore some options,
+we have a resource room full of things to try. Tell me, besides feeling nauseous and
+tired, is there anything that makes you feel even a little bit better?
+Daisy: Sometimes listening to music helps, but not always.
+Dr. Reed: What kind of music do you usually like?
+Daisy: Pop songs, mostly.
+Dr. Reed: How about I make you a playlist of fun, upbeat songs to try? Sometimes
+music can be a great distraction, and when you're feeling a little stronger might even
+give you a boost of energy. And remember, there's no right or wrong way to feel about
+the hair loss, but there are ways to manage the way it makes you feel. Let me know
+when you might be up for looking at some options, okay?

@@ -1,0 +1,13 @@
+PATIENT DESCRIPTION Peter, 10 years old, diagnosed with ALL SR and treated according to ALLtogether 1, end of induction (received dexamethasone). He is passive and inactive and prefers fries for dinner. He has sometimes constipation and abdominal pain.
+SAMPLE DIALOG
+Dr. Williams: Hi Peter, how are things going today?
+Peter: Okay, I guess.
+Dr. Williams: Your mom mentioned your tummy has been bothering you. Can you tell me a little more about that? Does it feel crampy, or more like a dull ache?
+Peter: Kinda achy. And sometimes it gets hard.
+Dr. Williams: That sounds like the constipation could be back. Do you remember the things that helped with that last time? Drinking lots of water, maybe taking some extra fiber?
+Peter: I don't like water, it's boring.
+Dr. Williams: I get that, plain water isn't the most exciting, but it really helps things move along. How about if we try adding a little bit of lemon or orange to your water to give it some flavor – does that sound better?
+Dr. Williams: Your mom also mentioned you've been a bit more tired and less active than usual. Do you feel like you don't have much energy to play, or does it feel different than that?
+Peter: I just want to watch TV. Playing is boring too.
+Dr. Williams: Sometimes the treatment can make you feel that way. It's okay to rest when you need to, but how about we try a short walk tomorrow? Just a quick loop around the hospital with me. Maybe some fresh air will help you feel a bit perkier.
+

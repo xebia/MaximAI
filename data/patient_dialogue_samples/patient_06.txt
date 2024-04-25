@@ -1,0 +1,18 @@
+PATIENT DESCRIPTION Roy, 15 years, diagnosed with Hodgkin lymphoma (cHL), treatment according to DECOPDAC-21. He received two cycles COPP-ABV: (cyclophosphamide, vincristine, procarbazine, prednisone, doxorubicin, bleomycin, vinblastine). Roy is a quiet and shy person, he is not very talkative. He has no appetite, experiences difficulty with sleeping and feels very tired.
+SAMPLE DIALOG
+Dr. Lopez: Hi Roy, how have you been feeling this week?
+Roy: Shrugs Okay, I guess.
+Dr. Lopez: You mentioned not having much of an appetite last time. Has that gotten any better, or are you still having trouble wanting to eat?
+Roy: Still not hungry.
+Dr. Lopez: I know the medicine can do that sometimes. But it's important to get some energy in. Are there any foods or drinks that even sound a little bit appealing? Sometimes even smoothies or milkshakes can be easier.
+Roy: Maybe a milkshake.
+Dr. Lopez: That's a great idea! Do you like chocolate or vanilla? We can also add some extra nutrition into a milkshake. You've also mentioned not sleeping very well. Is it hard to fall asleep, or are you waking up a lot during the night?
+Roy: Hard to fall asleep.
+Dr. Lopez: Is your mind feeling kind of busy or racing, or is it more that your body doesn't feel comfortable?
+Roy: Hesitates I think...worried.
+Dr. Lopez: That's a completely normal thing to feel. Would you like to talk more about what's worrying you? Sometimes just talking things through can help.
+Roy: Nods slightly
+Dr. Lopez: Is it worries about treatment, or maybe how you're feeling, or something else? Even if you're not sure how to put it into words, we can try.
+Roy: A little of everything. And...just tired of feeling this way.
+Dr. Lopez: I completely understand, Roy. It sounds like the side effects of treatment are really weighing on you, both physically and emotionally. We can try some things to help you sleep better, like creating a relaxing bedtime routine. And there are ways to manage the worries too. Would you like to learn some relaxation techniques, or maybe it would be helpful to talk to someone else on our team who specializes in helping kids cope with stress?
+

@@ -1,0 +1,15 @@
+PATIENT DESCRIPTION
+Emmy, 8 years old, diagnosed with osteosarcoma in left shoulder, treatment according to EURAMOS 1 protocol, successful resection of tumor, received treatment with doxorubicin, cisplatin, methotrexate, ifosfamide, and etoposide is now in the 25th week of treatment. She experiences loss of functionality in left arm, pain and anxiety.
+
+SAMPLE DIALOG
+
+Dr. Patel: Hi Emmy, let's talk about the pain in your arm. On a scale of 1 to 10, with 10 being the worst pain ever, how would you rate it right now?
+Emmy: Ummm…maybe a 6.
+Dr. Patel: Okay, so the pain is pretty strong. Does it stay at a 6 all the time, or does it get better or worse at different times of the day?
+Emmy: It gets worse at night, sometimes it even wakes me up.
+Dr. Patel: That's important to know. Do you notice if using your arm during the day makes the pain worse at night?
+Emmy: I'm not sure. I don't use my arm much anymore.
+Dr. Patel: That makes sense, Emmy. But let's try a little experiment. Tomorrow, try doing a couple of small things with your arm, like maybe brushing your hair or picking up a book, and see if it makes a difference in the pain at night.
+Dr. Patel: Since the pain is disrupting your sleep, we definitely need to find ways to manage it better. You mentioned before it feels like needles sometimes – is that still happening?
+Emmy: Yeah, mostly when it hurts the worst.
+Dr. Patel: That type of pain can mean the nerves in your arm are a bit irritated. That's something we can work on with medication and maybe some exercises. Is there anything else about the pain you want to tell me? Or is the pain also making you feel worried or anxious?

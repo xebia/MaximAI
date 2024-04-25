@@ -15,6 +15,6 @@ def transform_numbers_to_text(input_string):
 
 
 if __name__ == "__main__":
-    input_string = "There are 5 apples and 10 oranges"
+    input_string = "There are 5 apples and 101 oranges"
     transformed_string = transform_numbers_to_text(input_string)
     print(transformed_string)

@@ -13,7 +13,8 @@ chatbot = create_context_aware_chatbot()
 @app.post("/chat")
 async def root(prompt: Prompt):
     output = chatbot.invoke(
-        {"input": prompt.text, "context": get_patient_context(prompt.user_id)},
+        {"input": prompt.text,
+         "context": get_full_patient_context(prompt.user_id)},
         config={"configurable": {"user_id": prompt.user_id}},
     )
     output = output["output"]

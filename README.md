@@ -22,6 +22,7 @@ Authenticate to the GCLOUD CLI and set a default project.
 ```bash 
 #/bin/bash
 gcloud auth login
+gcloud auth application-default login
 gcloud config set project $MY_PROJECT_ID
 ```
 

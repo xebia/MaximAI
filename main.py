@@ -18,7 +18,7 @@ async def root(prompt: Prompt):
         {"input": prompt.text, "context": get_full_patient_context(prompt.user_id)},
         config={"configurable": {"user_id": prompt.user_id}},
     )
-    output = output["output"]
+    # output = output["content"]
     return {
         "input_message": prompt.text,
         "output_message": output.content,

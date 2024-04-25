@@ -174,10 +174,9 @@ def create_chat_chain() -> Runnable:
     
     interact_prompt = ChatPromptTemplate.from_messages(
         [
-            ("system", "{context}"),
+            ("system", "{context}. If one if the sympoms in the Pydantic schema is true {eval} react to the symptom that are true"),
             MessagesPlaceholder(variable_name="history"),
             ("human", "{input}"),
-            ("system", "If one if the sympoms in the Pydantic schema is true {eval} react to the symptom that are true"),
         ]
     )
     
@@ -193,14 +192,6 @@ def create_chat_chain() -> Runnable:
         "input": RunnableLambda(lambda x : x["input"]),
         "history": RunnableLambda(lambda x : x["history"])
     }) | interact_prompt | llm
-    
-    return RunnableParallel(
-        {
-            # "eval": ,
-            "output": create_interaction_chain() | create_eval_chain(),
-
-        }
-    )
 
 
 def create_context_aware_chatbot() -> Runnable:

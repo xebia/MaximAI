@@ -23,6 +23,7 @@ Authenticate to the GCLOUD CLI and set a default project.
 #/bin/bash
 gcloud auth login
 gcloud auth application-default login
+gcloud auth application-default set-quota-project $MY_PROJECT_ID
 gcloud config set project $MY_PROJECT_ID
 ```
 

@@ -102,7 +102,7 @@ def get_patient_info(user_id: str) -> str:
 
 def get_patient_context(user_id: str) -> str:
     patient = get_patient_info(user_id)
-    return f"%s is %d years old. %s" % (user_id, patient[age], patient[info])
+    return f"%s is %d years old. %s" % (user_id, patient['age'], patient['info'])
 
 # Ask in a tone of voice that is adapted to the age of the patient
 def get_tone_of_voice(user_id: str) -> str:

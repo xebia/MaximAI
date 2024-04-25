@@ -33,12 +33,23 @@ llm = ChatVertexAI(
     },
 )
 
+def debug(x):
+    print(x)
+    return x
+
+def debug_convo(x):
+    if nausia := x.nausia:
+        print(f"YES, nausia is mentioned! Pydantic output == {nausia}")
+    if pain := x.pain:
+        print(f"YES, pain is mentioned! Pydantic output == {pain}")
+    if anxiety := x.anxiety:
+        print(f"YES, anxiety is mentioned! Pydantic output == {anxiety}")
+    return x
 
 def get_user_history(user_id: str) -> BaseChatMessageHistory:
     if user_id not in store:
         store[user_id] = ChatMessageHistory()
     return store[user_id]
-
 
 def create_eval_chain() -> Runnable:
     parser = PydanticOutputParser(pydantic_object=symptom_eval)

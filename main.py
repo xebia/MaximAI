@@ -20,7 +20,7 @@ async def root(prompt: Prompt):
         {"input": prompt.text, "context": context},
         config={"configurable": {"user_id": prompt.user_id}},
     )
-    output = output["output"]
+    # output = output["content"]
     return {
         "input_message": prompt.text,
         "output_message": output.content,

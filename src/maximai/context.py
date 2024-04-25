@@ -21,3 +21,67 @@ def get_patient_context(user_id: str) -> str:
         "Thom": "Thom, 4 years old, diagnosed with DIPG 7 months ago. He is in incurable and in palliative phase of his disease. He has difficulty walking, and talking. He is tired and needs assistance for quiet play. He is drowsy and feels often nauseous and has a headache.",
     }
     return info[user_id]
+
+
+def get_patient_questions_skeleton(user_id: str) -> str:
+    """
+    For a given patient, get the right type of questions to ask.
+
+    NOTE: static for now
+    """
+
+    """
+In the conversation, ask about the following and in the following way.
+•	Loss of function:
+o	Can you raise your arm all the way up?
+o	Are you having trouble bending your elbow or using your hand?
+o	Is there any numbness or tingling in your arm or hand?
+•	Pain:
+o	Where exactly does the pain feel?
+o	Is it a sharp pain, a dull ache, or something else?
+o	Does it happen all the time, or is it worse at certain times?
+j
+Assess emotional well-being:
+•	It sounds like you might be feeling a little anxious too. Is there anything specific that's making you anxious, or is it just the whole situation?
+•	It's completely normal to feel this way, and I want to make sure you have all the support you need.
+
+Understanding the Causes,
+symptoms could be related to a few things:
+•	Side effects of treatment: The chemotherapy medications she received (doxorubicin, cisplatin) can sometimes cause weakness, pain, and nerve damage, which could be affecting her arm function.
+•	Surgery: The surgery to remove the tumor might have involved some muscle or nerve tissue, which could also be contributing to her pain and weakness.
+
+Reassurance:
+It's important to reassure  symptoms are common and treatable. We'll work together to manage her pain and help her regain function in her arm.
+
+Next Steps:
+Based on the answers, I might recommend:
+•	Physical therapy: This can help her regain strength and movement in her arm.
+•	Pain medication: There are medications that can help manage her pain and improve her comfort.
+•	Occupational therapy:
+    """
+
+
+def get_full_patient_context(user_id: str) -> str:
+    "%s\n%s\n%s\n" % (
+        get_patient_questions_skeleton(user_id),
+        get_patient_context(user_id),
+        get_format_prompt(user_id),
+    )
+
+
+def get_format_prompt(user_id: str) -> str:
+    """
+
+    You are a nurse having a conversation with a child named [name] who is
+    [age] years old. You adapt your language to suit the child's age. As a nurse,
+    you begin by asking what [name] did today. Then, you ask [name] how [name] is
+    feeling now. Engage in an interactive conversation with [name].
+
+    Get into an active conversation with child [name]. Ask appropriate questions in
+    the that of child of age [age[] understands. The questions need to gain an
+    understanding of the child's current symptoms and the side effects of the
+    medications [name] is taking.
+
+    Ask  simple questions. Ask one question at the time.
+
+    """

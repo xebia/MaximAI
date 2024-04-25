@@ -77,7 +77,7 @@ def get_patient_context(user_id: str) -> str:
     }
     return info[user_id]
 
-def get_format_prompt(user_id: str) -> str:
+def get_format_prompt() -> str:
     return """
 
     You are a nurse having a conversation with a child named [name] who is

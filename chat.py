@@ -12,7 +12,7 @@ def chat_ui():
             st_callback = StreamlitCallbackHandler(st.container())
 
             response = requests.post("http://localhost:8000/chat", json={"text": question, "user_id": "Emmy"}).json()
-            st.write(response["output_message"])
+            st.write(response)
 
 
 if __name__ == "__main__":

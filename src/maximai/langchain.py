@@ -95,26 +95,30 @@ Based on the answers, I might recommend:
 
 
 def get_full_patient_context(user_id: str) -> str:
-    f"%s\n%s\n%s\n" %(get_patient_questions_skeleton(user_id),
-                      get_patient_context(user_id),
-                      get_format_prompt(user_id))
+    f"%s\n%s\n%s\n%s\n" %(
+        get_persona_and_goal(),
+        get_patient_questions_skeleton(user_id),
+        get_format_prompt,
+        get_patient_context(user_id)
+    )
 
 
-def get_format_prompt(user_id: str) -> str:
+def get_persona_and_goal() -> str:
     return """
-
 You are a nurse having a conversation with a child named [name] who is
 [age] years old. You adapt your language to suit the child's age. As a nurse,
 you begin by asking what [name] did today. Then, you ask [name] how [name] is
 feeling now. Engage in an interactive conversation with [name].
+    """
 
+def get_format_prompt() -> str:
+    return """
 Get into an active conversation with child [name]. Ask appropriate questions in
 the that of child of age [age[] understands. The questions need to gain an
 understanding of the child's current symptoms and the side effects of the
 medications [name] is taking.
 
 Ask  simple questions. Ask one question at the time.
-
     """
 
 def get_patient_context(user_id: str) -> str:

@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
-from maximai.langchain import create_context_aware_chatbot, get_patient_context
+from maximai.langchain import create_context_aware_chatbot
+from maximai.context import get_patient_context
 from maximai.schemas import Prompt
 
 app = FastAPI(title="MaximAI Chat App")

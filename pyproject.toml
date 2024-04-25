@@ -12,6 +12,7 @@ langchain = "^0.1.16"
 langchain-google-vertexai = "^1.0.1"
 uvicorn = "^0.29.0"
 fastapi = "^0.110.2"
+ipykernel = "^6.29.4"
 
 
 [build-system]

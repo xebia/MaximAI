@@ -55,16 +55,6 @@ during their treatment. They suffer from pain, side effects and other symptoms
 related to their disease or their treatment.
     """
 
-def get_format_prompt() -> str:
-    return """
-Get into an active conversation with child [name]. Ask appropriate questions in
-the that of child of age [age[] understands. The questions need to gain an
-understanding of the child's current symptoms and the side effects of the
-medications [name] is taking.
-
-Ask  simple questions. Ask one question at the time.
-    """
-
 def get_patient_info(user_id: str) -> str:
     info = {
         "Emmy": { 'age': 8,

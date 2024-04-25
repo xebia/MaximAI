@@ -78,8 +78,12 @@ def create_chat_chain() -> Runnable:
         template="""
         You are getting a conversation as input.
         
-        Output whether the pizza is mentioned in the chat conversation by the user.
+        Output whether the user talked about pizza
         
+        user last message is:
+        {input}
+        
+        Chat History is:
         {history}
         
         {format_instructions}
@@ -94,15 +98,15 @@ def create_chat_chain() -> Runnable:
         print(x)
         return x
 
+    def debug_convo(x):
+        if pizza := x.is_pizza_mentioned:
+            print(f"YES, pizza is mentioned! Pydantic output == {pizza}")
+        return x
+
     llm = ChatVertexAI(model_name="gemini-1.0-pro")
     return RunnableParallel(
         {
-            "eval": RunnableLambda(debug)
-            | eval_prompt
-            | RunnableLambda(debug)
-            | llm
-            | parser
-            | RunnableLambda(debug),
+            "eval": eval_prompt | llm | parser | RunnableLambda(debug_convo),
             "output": interact_prompt | llm,
         }
     )

@@ -1,4 +1,4 @@
-
+export URL=http://127.0.0.1:8000
 curl -X POST $URL/chat -H "Content-Type: application/json" -d '{"text":"What is my favourite food?", "user_id":"sander"}'
 
 curl -X POST $URL/chat -H "Content-Type: application/json" -d '{"text":"What is my favourite food?", "user_id":"shu"}'

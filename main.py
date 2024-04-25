@@ -15,6 +15,7 @@ async def root(prompt: Prompt):
         {"input": prompt.text, "context": get_context(prompt.user_id)},
         config={"configurable": {"user_id": prompt.user_id}},
     )
+    output = output["output"]
     return {
         "input_message": prompt.text,
         "output_message": output.content,

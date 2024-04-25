@@ -1,11 +1,28 @@
+from langchain.output_parsers import PydanticOutputParser
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.chat_history import BaseChatMessageHistory
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_core.runnables import ConfigurableFieldSpec, Runnable
-from langchain_core.runnables.history import RunnableWithMessageHistory
+from langchain_core.prompts import (
+    ChatPromptTemplate,
+    MessagesPlaceholder,
+    PromptTemplate,
+)
+from langchain_core.runnables import (
+    ConfigurableFieldSpec,
+    Runnable,
+    RunnableLambda,
+    RunnableParallel,
+)
+from langchain_core.runnables.history import (
+    RunnableWithMessageHistory,
+)
 from langchain_google_vertexai import ChatVertexAI
+from pydantic import BaseModel, Field
 
 store = {}
+
+
+class eval(BaseModel):
+    is_pizza_mentioned: bool = Field("is pizza mentioned in the convo?")
 
 
 def get_context(user_id: str) -> str:
@@ -30,7 +47,7 @@ def create_chat_chain() -> Runnable:
     Returns:
         Runnable: Simple conversational chain.
     """
-    prompt = ChatPromptTemplate.from_messages(
+    interact_prompt = ChatPromptTemplate.from_messages(
         [
             (
                 "system",
@@ -41,8 +58,38 @@ def create_chat_chain() -> Runnable:
         ]
     )
 
-    llm = ChatVertexAI()
-    return prompt | llm
+    eval_prompt_template = PromptTemplate.from_template(
+        template="""
+        You are getting a conversation as input.
+        
+        Output whether the pizza is mentioned in the chat conversation by the user.
+        
+        {history}
+        
+        {format_instructions}
+        """
+    )
+    parser = PydanticOutputParser(pydantic_object=eval)
+    eval_prompt = eval_prompt_template.partial(
+        format_instructions=parser.get_format_instructions()
+    )
+
+    def debug(x):
+        print(x)
+        return x
+
+    llm = ChatVertexAI(model_name="gemini-1.0-pro")
+    return RunnableParallel(
+        {
+            "eval": RunnableLambda(debug)
+            | eval_prompt
+            | RunnableLambda(debug)
+            | llm
+            | parser
+            | RunnableLambda(debug),
+            "output": interact_prompt | llm,
+        }
+    )
 
 
 def create_context_aware_chatbot() -> Runnable:

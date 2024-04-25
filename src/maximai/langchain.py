@@ -83,11 +83,34 @@ def create_chat_chain() -> Runnable:
     Returns:
         Runnable: Simple conversational chain.
     """
-
+    
+    interact_prompt = ChatPromptTemplate.from_messages(
+        [
+            ("system", "{context}"),
+            MessagesPlaceholder(variable_name="history"),
+            ("human", "{input}"),
+            ("system", "If one if the sympoms in the Pydantic schema is true {eval} react to the symptom that are true"),
+        ]
+    )
+    
+    parser = PydanticOutputParser(pydantic_object=symptom_eval)
+    
+    eval = get_eval_prompt()
+    eval_prompt = eval.partial(
+        format_instructions=parser.get_format_instructions()
+    )
+    return RunnableParallel({
+        "eval": eval_prompt | llm | parser, 
+        "context": RunnableLambda(lambda x : x["context"]),
+        "input": RunnableLambda(lambda x : x["input"]),
+        "history": RunnableLambda(lambda x : x["history"])
+    }) | interact_prompt | llm
+    
     return RunnableParallel(
         {
-            "eval": create_eval_chain(),
-            "output": create_interaction_chain(),
+            # "eval": ,
+            "output": create_interaction_chain() | create_eval_chain(),
+
         }
     )
 

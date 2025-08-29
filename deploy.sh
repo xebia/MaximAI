@@ -4,7 +4,7 @@
 PROJECT_ID=qwiklabs-gcp-02-c86bd22dbd03
 IMAGE_NAME=maximai           
 REGION=europe-west4            
-SERVICE_NAME=maximai           
+SERVICE_NAME=maximai-v3
 CONTAINER_PORT=8080                       
 
 gcloud config set project $PROJECT_ID
